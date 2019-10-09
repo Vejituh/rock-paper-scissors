@@ -1,3 +1,123 @@
+body{
+    margin:0 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+.nav {
+    background-color:#efefef;
+    border: 1px solid #efefef;
+    border-bottom: 2.5px solid gainsboro;
+}
+
+.nav h1{
+    text-align: center;
+    color: #ff7729;
+}
+
 .container {
-    display: flexbox;
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    height:100%;
+}
+
+.rowDivs {
+    display: flex;
+    flex-flow: row wrap; 
+    margin: 100px;
+}
+
+.rowDivs div > button {
+    margin-right: 30px;
+    height:14rem;
+    width:14rem;
+}
+
+.rock button{
+    background: #efefef
+    url("https://img.icons8.com/color/480/000000/hand-rock.png")
+    no-repeat;
+    background-size: 90% 90%;
+    background-position: center;
+    border-radius: 15px;
+    border: 4px solid white;
+    text-transform: none;
+}
+
+.paper button {
+    background: #efefef
+    url("https://img.icons8.com/color/480/000000/hand.png")
+    no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+    border-radius: 15px;
+    border: 4px solid white;
+    text-transform: none;
+}
+
+.scissors button {
+    background: #efefef
+    url("https://img.icons8.com/color/480/000000/hand-scissors.png")
+    no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+    border-radius: 15px;
+    border: 4px solid white;
+    text-transform: none;
+}
+
+.scoreBoard {
+    padding:0px 50px;
+    text-align: center;
+    background-color:#efefef;
+    height:100%;
+    border-radius: 15px;
+    border: 4px solid white;
+    text-transform: none;
+    
+}
+
+.score {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.score div {
+    width: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777777;
+    font-weight: 600;
+}
+
+.scoreBoard h3 {
+    color: #777777;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+#scoreUser {
+    font-size: 3.5rem;
+    color: #00aae3;
+    font-family: "haymakerregular", Helvetica, Arial, sans-serif;
+}
+
+#aiUser {
+    font-size: 3.5rem;
+    color: #00aae3;
+    font-family: "haymakerregular", Helvetica, Arial, sans-serif;
+}
+
+.divider span{
+    font-size: 3.0rem;
+    color: #00aae3;
+    font-weight: 200;
+}
+
+div > button:hover {
+    cursor: pointer;
+    border: 4px solid #00aae3;
+    transform: scale(1.2);
+    transition: transform .3s;
 }
