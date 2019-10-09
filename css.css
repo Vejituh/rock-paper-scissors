@@ -18,6 +18,7 @@ body{
 .container {
     display: flex;
     margin-top: 50px;
+    justify-content: center;
     align-items: center;
     height:100%;
 }
@@ -36,7 +37,7 @@ body{
 
 .rock button{
     background: #efefef
-    url("https://img.icons8.com/color/480/000000/hand-rock.png")
+    url("https://img.icons8.com/color/240/000000/hand-rock.png")
     no-repeat;
     background-size: 90% 90%;
     background-position: center;
@@ -47,7 +48,7 @@ body{
 
 .paper button {
     background: #efefef
-    url("https://img.icons8.com/color/480/000000/hand.png")
+    url("https://img.icons8.com/color/240/000000/hand.png")
     no-repeat;
     background-size: 80% 80%;
     background-position: center;
@@ -58,7 +59,7 @@ body{
 
 .scissors button {
     background: #efefef
-    url("https://img.icons8.com/color/480/000000/hand-scissors.png")
+    url("https://img.icons8.com/color/240/000000/hand-scissors.png")
     no-repeat;
     background-size: 80% 80%;
     background-position: center;
