@@ -1,6 +1,7 @@
 const btnRock = document.querySelector('.btnRock');
 const btnPaper = document.querySelector('.btnPaper');
 const btnScissors = document.querySelector('.btnScissors');
+let desc = '';
 let numOfGame = 0;
 let userScore = 0;
 let aiScore = 0;
@@ -45,88 +46,103 @@ btnScissors.addEventListener('click', () => {
 
 function playRound(playerSelection, computerSelection){
     if(userScore > 4 || aiScore > 4){
+        if(userScore > aiScore){
+            desc = 'Game over. You win!';
+        } else {
+            desc = 'Game over. You Lose!';
+        }
         numOfGame = 0;
         userScore = 0;
         aiScore = 0;
         document.querySelector('#scoreUser').innerHTML = userScore;
         document.querySelector('#aiUser').innerHTML = aiScore;
+        document.querySelector('.desc').innerHTML = desc;
     
 }  else{
     switch(true) {
         case playerSelection === 'rock' && computerSelection === 'paper':
-            console.log('You lose. Paper beats Rock');
+            desc = 'You lose. Paper beats Rock';
             aiScore ++;
             numOfGame ++;
             document.querySelector('#aiUser').innerHTML = aiScore;
+            document.querySelector('.desc').innerHTML = desc;
             btnRock.style.border = "solid 4px #e53935";
             btnPaper.style.border = "solid 4px #4CAF50";
             btnRock.style.transform =  "scale(1.1)";
             btnPaper.style.transform =  "scale(1.1)";
             return 0;
         case playerSelection === 'rock' && computerSelection === 'scissors':
-            console.log('You win. Rock beats Scissors');
+            desc = 'You win. Rock beats Scissors';
             userScore ++;
             numOfGame ++;
             document.querySelector('#scoreUser').innerHTML = userScore;
+            document.querySelector('.desc').innerHTML = desc;
             btnRock.style.border = "solid 4px #4CAF50";
             btnScissors.style.border = "solid 4px #e53935";
             btnScissors.style.transform =  "scale(1.1)";
             btnRock.style.transform =  "scale(1.1)";
             return 1;
         case playerSelection === 'rock' && computerSelection === 'rock':
-            console.log('It is a draw');
+            desc = 'It is a draw';
+            document.querySelector('.desc').innerHTML = desc;
             numOfGame ++;
             btnRock.style.border = "solid 4px #e53935";
             btnRock.style.transform =  "scale(1.1)";
             break;
         case playerSelection === 'paper' && computerSelection === 'rock':
-            console.log('You win. Paper beats Rock');
+            desc = 'You win. Paper beats Rock';
             numOfGame ++;
             userScore ++;
             document.querySelector('#scoreUser').innerHTML = userScore;
+            document.querySelector('.desc').innerHTML = desc;
             btnRock.style.border = "solid 4px #e53935";
             btnPaper.style.border = "solid 4px #4CAF50";
             btnRock.style.transform =  "scale(1.1)";
             btnPaper.style.transform =  "scale(1.1)";
             return 0;
         case playerSelection === 'paper' && computerSelection === 'scissors':
-            console.log('You lose. Scissors beats Paper');
+            desc = 'You lose. Scissors beats Paper';
             numOfGame ++;
             aiScore ++;
             document.querySelector('#aiUser').innerHTML = aiScore;
+            document.querySelector('.desc').innerHTML = desc;
             btnScissors.style.border = "solid 4px #4CAF50";
             btnPaper.style.border = "solid 4px #e53935";
             btnScissors.style.transform =  "scale(1.1)";
             btnPaper.style.transform =  "scale(1.1)";
             return 1;
         case playerSelection === 'paper' && computerSelection === 'paper':
-            console.log('It is a draw');
+            desc = 'It is a draw';
+            document.querySelector('.desc').innerHTML = desc;
             numOfGame ++;
             btnPaper.style.border = "solid 4px #e53935";
             btnPaper.style.transform =  "scale(1.1)";
             break;
         case playerSelection === 'scissors' && computerSelection === 'rock':
-            console.log('You lose. Rock beats Scissors');
+            desc = 'You <b>lose</b> Rock beats Scissors';
             numOfGame ++;
             aiScore ++;
             document.querySelector('#aiUser').innerHTML = aiScore;
+            document.querySelector('.desc').innerHTML = desc;
             btnRock.style.border = "solid 4px #4CAF50";
             btnScissors.style.border = "solid 4px #e53935";
             btnScissors.style.transform =  "scale(1.1)";
             btnRock.style.transform =  "scale(1.1)";
             return 0;
         case playerSelection === 'scissors' && computerSelection === 'paper':
-            console.log('You win. scissors beats paper');
+            desc = 'You win. scissors beats paper';
             numOfGame ++;
             userScore ++;
             document.querySelector('#scoreUser').innerHTML = userScore;
+            document.querySelector('.desc').innerHTML = desc;
             btnScissors.style.border = "solid 4px #4CAF50";
             btnPaper.style.border = "solid 4px #e53935";
             btnScissors.style.transform =  "scale(1.1)";
             btnPaper.style.transform =  "scale(1.1)";
             return 1;
         case playerSelection === 'scissors' && computerSelection === 'scissors':
-            console.log('It is a draw');
+            desc = 'It is a draw';
+            document.querySelector('.desc').innerHTML = desc;
             numOfGame ++;
             btnScissors.style.border = "solid 4px #e53935";
             btnScissors.style.transform =  "scale(1.1)";
