@@ -5,58 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rock Paper Scissors</title>
-    <script type='text/javascript' src='js.js'> </script>
-    <link rel='stylsheet' type='text/css' href='css.css'/>
+    <link rel="stylesheet" type="text/css" href="css.css"/>
 </head>
 <body>
-    <script>
-        function game(){
-            let numOfGame = 0
-            for (numOfGame = 0; numOfGame < 5; numOfGame++){
-                playRound(playerSelection, computerSelection);
-                playerSelection = prompt('Rock, Paper or Scissors?').toLowerCase();
-                computerSelection = computerPlay();
-            } return 'End of game';
-        }
-        function playRound(playerSelection, computerSelection){
-            switch(true) {
-                case playerSelection === 'rock' && computerSelection === 'paper':
-                    console.log('You lose. Paper beats Rock');
-                    return 0;
-                case playerSelection === 'rock' && computerSelection === 'scissors':
-                    console.log('You win. Rock beats Scissors');
-                    return 1;
-                case playerSelection === 'rock' && computerSelection === 'rock':
-                    console.log('It is a draw');
-                    break;
-                case playerSelection === 'paper' && computerSelection === 'rock':
-                    console.log('You win. Paper beats Rock');
-                    return 0;
-                case playerSelection === 'paper' && computerSelection === 'scissors':
-                    console.log('You lose. Scissors beats Paper');
-                    return 1;
-                case playerSelection === 'paper' && computerSelection === 'paper':
-                    console.log('It is a draw');
-                    break;
-                case playerSelection === 'scissors' && computerSelection === 'rock':
-                    console.log('You lose. Rock beats Scissors');
-                    return 0;
-                case playerSelection === 'scissors' && computerSelection === 'paper':
-                    console.log('You win. scissors beats paper');
-                    return 1;
-                case playerSelection === 'scissors' && computerSelection === 'scissors':
-                    console.log('It is a draw');
-                    break;
-        }
-    }
-            let playerSelection = prompt('Rock, Paper or Scissors?').toLowerCase();
-            let computerSelection = computerPlay();
-
-        function computerPlay(){
-            let computergoes = ['Rock', 'Paper', 'Scissors'];
-            let computergo = computergoes[Math.floor(Math.random()*computergoes.length)];
-            return computergo.toLowerCase();
-        }
-    </script>
+    <div class='nav'>
+        <nav>
+            <h1>Rock, Paper, Scissors</h1>
+        </nav>
+    </div>
+    <div class='container'>
+        <div class ="rowDivsContainer">
+        <div class ='rowDivs'>
+            <div class = 'rock'>
+                <button class= 'btnRock'></button>
+            </div>
+            <div class = 'paper'>
+                <button class= 'btnPaper'></button>
+            </div>
+            <div class = 'scissors'>
+                <button class= 'btnScissors'></button>
+            </div>
+        </div>
+        <div class= "textWL">
+                <p class='desc'>Pick Rock, Paper or Scissors</p>
+            </div>
+    </div>
+        <div class ='scoreBoard'>
+            <h3>Score</h3>
+        <div class='score'>
+            <div class='score-user'>
+                <span id="scoreUser">0</span>
+                <br>
+                <p>You</p>
+            </div>
+            <div class='divider'>
+                    <span>-</span>
+            </div>
+            <div class='score-ai'>
+                    <span id="aiUser">0</span>
+                    <br>
+                    <p>AI</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script type='text/javascript' src='js.js'> </script>
 </body>
 </html>

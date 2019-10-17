@@ -1,0 +1,304 @@
+body{
+    margin:0 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+.nav {
+    background-color:#efefef;
+    border: 1px solid #efefef;
+    border-bottom: 2.5px solid gainsboro;
+}
+
+.nav h1{
+    text-align: center;
+    color: #ff7729;
+}
+
+.container {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+
+.rowDivs {
+    display: flex;
+    flex-flow: row wrap; 
+    margin: 100px 100px 30px 100px;
+}
+
+.rowDivs div > button {
+    margin-right: 30px;
+    height:14rem;
+    width:14rem;
+}
+
+.rock button{
+    background: #efefef
+    url("https://img.icons8.com/color/240/000000/hand-rock.png")
+    no-repeat;
+    background-size: 90% 90%;
+    background-position: center;
+    border-radius: 15px;
+    border: 4px solid white;
+    text-transform: none;
+}
+
+.paper button {
+    background: #efefef
+    url("https://img.icons8.com/color/240/000000/hand.png")
+    no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+    border-radius: 15px;
+    border: 4px solid white;
+    text-transform: none;
+}
+
+.scissors button {
+    background: #efefef
+    url("https://img.icons8.com/color/240/000000/hand-scissors.png")
+    no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+    border-radius: 15px;
+    border: 4px solid white;
+    text-transform: none;
+}
+
+.textWL {
+    margin-left: 100px;
+    font-size: 1.2rem;
+    color: #777777;
+    font-weight: 600;
+}
+
+.rowDivsContainer {
+    flex-direction: column;
+}
+
+.scoreBoard {
+    margin-top: 27px;
+    height: 216px;
+    width: 15rem;
+    text-align: center;
+    background-color:#efefef;
+    border-radius: 15px;
+    border: 4px solid white;
+    text-transform: none;
+    
+}
+
+.score {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;;
+}
+
+.score div {
+    width: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777777;
+    font-weight: 600;
+}
+
+.scoreBoard h3 {
+    color: #777777;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+#scoreUser {
+    font-size: 3.5rem;
+    color: #00aae3;
+    font-family: "haymakerregular", Helvetica, Arial, sans-serif;
+}
+
+#aiUser {
+    font-size: 3.5rem;
+    color: #00aae3;
+    font-family: "haymakerregular", Helvetica, Arial, sans-serif;
+}
+
+.divider span{
+    font-size: 3.0rem;
+    color: #00aae3;
+    font-weight: 200;
+}
+
+div > button:hover {
+    cursor: pointer;
+    border: 4px solid #00aae3;
+    transform: scale(1.2);
+    transition: transform .3s;
+}
+
+@media only screen and (max-width: 1210px) {
+    .scoreBoard {
+        width: 12rem;
+        height: 170px;
+    }
+
+    .score div {
+        font-size: 1.0rem;
+    }
+    .scoreBoard h3 {
+        font-size: 1.3rem;
+    }
+    
+    .rowDivs {
+        margin: 100px 60px 30px 100px;
+    }
+
+    .rowDivs div > button {
+        margin-right: 30px;
+        height:11rem;
+        width:11rem;
+    }
+}
+
+@media only screen and (max-width: 986px){
+    .scoreBoard {
+        width: 10rem;
+        height: 150px;
+    }
+
+    .score div {
+        font-size: 0.8rem;
+    }
+    .scoreBoard h3 {
+        font-size: 1.0rem;
+    }
+
+    #scoreUser {
+        font-size: 3.0rem;
+    }
+    
+    #aiUser {
+        font-size: 3.0rem;
+    }
+    
+    .rowDivs {
+        margin: 100px 40px 30px 100px;
+    }
+
+    .rowDivs div > button {
+        margin-right: 30px;
+        height:10rem;
+        width:10rem;
+    }
+}
+
+@media only screen and (max-width: 986px){
+    .scoreBoard {
+        width: 10rem;
+        height: 120px;
+    }
+
+    .score div {
+        font-size: 0.8rem;
+    }
+    .scoreBoard h3 {
+        font-size: 1.0rem;
+    }
+
+    #scoreUser {
+        font-size: 2.0rem;
+    }
+    
+    #aiUser {
+        font-size: 2.0rem;
+    }
+
+    .divider span{
+        font-size: 2.0rem;
+    }
+    
+    .rowDivs {
+        margin: 100px 20px 30px 100px;
+    }
+
+    .rowDivs div > button {
+        margin-right: 30px;
+        height:8rem;
+        width:8rem;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .container {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .nav h1{
+        font-size: 1.0rem;
+    }
+
+    .rowDivs {
+        margin: 0px;
+    }
+
+    .rowDivs div > button {
+        margin: 0px 20px 0px 20px;
+        height:8rem;
+        width:7rem;
+    }
+
+    .textWL {
+        margin-left: 0px;
+    }
+    .scoreBoard {
+        width: 10rem;
+        height: 160px;
+    }
+
+    .score div {
+        font-size: 1.0rem;
+    }
+    .scoreBoard h3 {
+        font-size: 1.2rem;
+    }
+
+    #scoreUser {
+        font-size: 3.0rem;
+    }
+    
+    #aiUser {
+        font-size: 3.0rem;
+    }
+
+    .divider span{
+        font-size: 3.0rem;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .container {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .nav h1{
+        font-size: 1.0rem;
+    }
+
+    .rowDivs {
+        margin: 0px;
+    }
+
+    .rowDivs div > button {
+        margin: 0px 10px 0px 10px;
+        height:6rem;
+        width:5rem;
+    }
+
+    .textWL {
+        margin-left: 0px;
+    }
+}
